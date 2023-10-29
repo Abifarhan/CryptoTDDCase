@@ -1,4 +1,4 @@
-package com.ourproject.cryptotddcase
+package com.ourproject.cryptotddcase.domain
 
 import kotlinx.coroutines.flow.Flow
 import java.lang.Exception

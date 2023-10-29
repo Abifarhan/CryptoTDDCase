@@ -1,4 +1,4 @@
-package com.ourproject.cryptotddcase
+package com.ourproject.cryptotddcase.domain
 
 data class CryptoFeed(
     val coinInfo: CoinInfo,
