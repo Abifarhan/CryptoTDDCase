@@ -3,12 +3,12 @@ package com.ourproject.cryptotddcase.domain
 import kotlinx.coroutines.flow.Flow
 import java.lang.Exception
 
-interface CryptoFeedUseCase {
+interface LoadCryptoFeedRemoteUseCase {
 
-    fun load(): Flow<CryptoFeedResult>
+    fun load(): Flow<LoadCryptoFeedResult>
 }
 
-sealed class CryptoFeedResult {
+sealed class LoadCryptoFeedResult {
 
     data class Success(val cryptoFeed: List<CryptoFeed>)
 
