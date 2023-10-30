@@ -1,24 +1,13 @@
 package com.ourproject.cryptotddcase
 
+import com.ourproject.cryptotddcase.api.HttpClient
+import com.ourproject.cryptotddcase.api.LoadCryptoFeedRemoteUseCase
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
 
-class LoadCryptoFeedRemoteUseCase constructor(
-    private val client: HttpClient
-){
 
-    fun load() {
-        client.get()
-    }
-}
-
-interface HttpClient{
-
-
-    fun get()
-}
 
 class LoadCryptoFeedRemoteUseCaseTest {
 
