@@ -1,7 +1,7 @@
 [versions]
 # Plugin
 androidGradlePlugin= "8.0.0"
-kotlinAndroid= "1.8.20"
+kotlinAndroid= "1.8.10"
 
 coreKtx = "1.8.0"
 lifecycleRuntimeKtx = "2.3.1"
