@@ -13,7 +13,7 @@ class LoadCryptoFeedRemoteUseCaseTest {
 
 
     @Test
-    fun testInitDoesNotLoad() {
+    fun testInitDoesNotRequestData() {
         val (_, client) = makeSut()
 
 
@@ -21,7 +21,7 @@ class LoadCryptoFeedRemoteUseCaseTest {
     }
 
     @Test
-    fun testLoadRequestData() {
+    fun testLoadRequestsData() {
         // Given
         val (sut, client) = makeSut()
 
