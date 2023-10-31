@@ -85,7 +85,9 @@ dependencies {
     kapt(libs.room.compiler)
     implementation(libs.room.runtime)
 
-    testImplementation ("io.mockk:mockk-android:1.13.0")
+    testImplementation (libs.mockk.android)
     testImplementation (libs.mockk.agent)
+//    testImplementation ("io.mockk:mockk:1.14.0")
     testImplementation ("app.cash.turbine:turbine:1.0.0")
+//    testImplementation("io.mockk:mockk:1.14.0")
 }

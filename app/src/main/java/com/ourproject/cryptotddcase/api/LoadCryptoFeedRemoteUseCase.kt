@@ -21,3 +21,5 @@ class LoadCryptoFeedRemoteUseCase constructor(
 class Connectivity: Exception()
 class BadRequest: Exception()
 
+class ConnectivityException : Exception()
+

@@ -10,7 +10,8 @@ lifecycleRuntimeKtx = "2.3.1"
 activityCompose = "1.5.1"
 composeBom = "2023.04.01"
 androidxLifecycle = "2.5.1"
-mockkAgent="1.13"
+mockkAgent="1.13.0"
+mockkAndroid="1.13.0"
 runtimeTracing = "1.0.0-alpha01"
 navigation= "2.5.3"
 
@@ -52,6 +53,7 @@ lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtim
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
 activity-compose = { group = "androidx.activity", name = "activity-compose" }
 mockk-agent = { module = "io.mockk:mockk-agent", version.ref = "mockkAgent" }
+mockk-android = { module = "io.mockk:mockk-android", version.ref = "mockkAndroid" }
 ui = { group = "androidx.compose.ui", name = "ui" }
 ui-graphics= { group = "androidx.compose.ui", name = "ui-graphics" }
 ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
