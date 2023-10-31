@@ -12,7 +12,15 @@ class LoadCryptoFeedRemoteUseCase constructor(
 
     fun load() : Flow<Exception> = flow{
         client.get().collect {error ->
-            emit(Connectivity())
+
+            when (error) {
+                is ConnectivityException -> {
+                    emit(Connectivity())
+                }
+                is InvalidDataException -> {
+                    emit(InvalidData())
+                }
+            }
         }
     }
 }
@@ -22,4 +30,6 @@ class Connectivity: Exception()
 class BadRequest: Exception()
 
 class ConnectivityException : Exception()
+class InvalidDataException : Exception()
+class InvalidData : Exception()
 

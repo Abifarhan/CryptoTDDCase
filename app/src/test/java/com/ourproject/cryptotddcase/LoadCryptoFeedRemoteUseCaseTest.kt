@@ -4,6 +4,8 @@ import app.cash.turbine.test
 import com.ourproject.cryptotddcase.api.Connectivity
 import com.ourproject.cryptotddcase.api.ConnectivityException
 import com.ourproject.cryptotddcase.api.HttpClient
+import com.ourproject.cryptotddcase.api.InvalidData
+import com.ourproject.cryptotddcase.api.InvalidDataException
 import com.ourproject.cryptotddcase.api.LoadCryptoFeedRemoteUseCase
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -100,6 +102,24 @@ class LoadCryptoFeedRemoteUseCaseTest {
 
     }
 
+    @Test
+    fun testLoadDeliversInvalidDataErrorOnClientError() = runBlocking {
+        every {
+            client.get()
+        } returns flowOf(InvalidDataException())
+
+        sut.load().test {
+            assertEquals(InvalidData::class.java, awaitItem()::class.java)
+            awaitComplete()
+        }
+
+        verify(exactly = 1){
+            client.get()
+        }
+
+        confirmVerified(client)
+
+    }
 
 
 }
