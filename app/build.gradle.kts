@@ -84,4 +84,7 @@ dependencies {
     implementation(libs.room)
     kapt(libs.room.compiler)
     implementation(libs.room.runtime)
+
+    testImplementation ("io.mockk:mockk-android:1.13.0")
+    testImplementation (libs.mockk.agent)
 }
